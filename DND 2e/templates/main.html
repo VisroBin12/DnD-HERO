@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DnD 2e</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <navbar class="nenu">
+            <a href="/" class="nav_button">Заклинания</a>
+            <a href="/skills" class="nav_button">Боевые навыки</a>
+            <a href="/skills_peaceful" class="nav_button">Мирные навыки</a>
+            <a href="/items1" class="nav_button">Предметы</a>
+            <a href="/armor" class="nav_button">Броня</a>
+        </navbar>
+        <navbar class="filter">
+            <button>Уровень</button>
+            <button>Школа</button>
+            <button>Алфавит</button>
+        </navbar>
+    </header>
+    <div class="container">
+        {% for spell in spells%}
+        <div class="card">
+            <h2>{{spell[1]}}</h2>
+            <h3>{{spell[4]}}</h3>
+            <h3>Уровень: {{spell[2]}}</h3>
+            <h3>{{spell[3]}}</h3>
+        </div>
+        {% endfor %}
+
+    <div class="container">
+        {% for skill in skills%}
+        <div class="card">
+            <h2>{{skill[1]}}</h2>
+            <h3>{{skill[2]}}</h3>
+        </div>
+        {% endfor %}
+
+    <div class="container">
+        {% for item in items%}
+        <div class="card">
+            <h2>{{item[1]}}</h2>
+            <h3>Цена: {{item[2]}}</h3>
+            <h3>Вес: {{item[3]}}</h3>
+        </div>
+        {% endfor %}
+
+        <div class="container">
+            {% for skills_peaceful in skills_peacefuls%}
+            <div class="card">
+                <h2>{{skills_peaceful[1]}}</h2>
+                <h3>Цена навыка: {{skills_peaceful[2]}}</h3>
+                <h3>{{skills_peaceful[3]}}</h3>
+                <h3>Класс навыка:{{skills_peaceful[4]}}</h3>
+            </div>
+            {% endfor %}
+
+        <div class="container">
+            {% for armor in armors%}
+            <div class="card">
+                <h2>{{armor[2]}}</h2>
+                <h3>Подкласс: {{armor[1]}}</h3>
+                <h3>Класс Брони{{armor[4]}}</h3>
+                <h3>Снижение урона:{{armor[5]}}</h3>
+                <h3>Штраф к скрытности:{{armor[6]}}</h3>
+                <h3>Вес:{{armor[7]}}</h3>
+                <h3>Цена:{{armor[3]}}</h3>
+            </div>
+            {% endfor %}
+    </div>
+</body>
+</html>

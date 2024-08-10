@@ -1,0 +1,59 @@
+.conteiner{
+    background-color: rgba(212, 90, 34, 0.815);
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    transition: all ease-in 300ms;
+    animation: identifier 5s ease infinite;
+}
+
+.conteiner:hover{
+    background-color: #463af0;
+}
+
+@keyframes identifier {
+    0%{
+
+    }
+    50%{
+        transform: translateX(330px);
+    }
+    100%{
+
+    }
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(253, 252, 250);
+}
+
+img {
+    width: 200px;
+    animation-name: rotation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.loader-container {
+    text-align: center;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+}
+
+@keyframes rotation {
+    to{
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DnD 2e</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <navbar class="nenu">
+            <a href="/" class="nav_button">Выйти из админ панели</a>
+            <a href="/create" class="nav_button">Создать запись</a>
+            <a href="/delete" class="nav_button">Удалить запись</a>
+            <a href="/edit" class="nav_button">Редактировать запись</a>
+        </navbar>
+    </header>
+    {% if (form == "create") %}
+    <form method="post" action="/create">
+<!-- Выбор, что добавлять -->
+        <div class="combobox">
+            <label for="skill_radio">Боевой навык</label>
+            <input name="skill_radio" onclick="skill_form()" type="radio">
+
+            <label for="peaceful_skill_radio">Мирные навыки</label>
+            <input name="peaceful_skill" onclick="peaceful_skill_form()" type="radio">
+        </div>
+        <div class="combobox">
+            <label for="spells_radio">Заклинание</label>
+            <input name="spells_radio" onclick="spell_form()" type="radio">
+
+            <label for="armor_radio">Броня</label>
+            <input name="armor_radio" onclick="armor_form()" type="radio">
+
+            <label for="item_radio">Предметы</label>
+            <input name="item_radio" onclick="item_form()" type="radio">
+        </div>
+
+<!-- Конец выбора -->
+<!-- Поля для добавления (Заклинания)-->
+        <label class="spell" for="spell_name">Название заклинания</label>
+        <input placeholder="Название заклниание" class="spell" name="spell_name" type="text">
+
+        <label class="spell" for="spell_lvl">Уровень заклинания</label>
+        <input placeholder="Уровень заклинания" min="1", max="9" class="spell" name="spell_lvl" type="number">
+
+        <label class="spell" for="spell_scholl">Школа заклинания</label>
+        <input placeholder="Школа заклинания" class="spell" name="spell_school" type="text">
+
+        <label class="spell" for="spell_desc">Описание заклинания</label>
+        <input placeholder="Описание заклинания" class="spell" name="spell_desc" type="text">
+<!-- Конец полей для ввода-->
+
+<!-- Поля для добавления боевого навыка -->
+        <label class="skill" for="skill_name">Название навыка</label>
+        <input placeholder="Название навыка" class="skill" name="skill_name" type="text">
+
+        <label class="skill" for="skill_desc">Описание навыка</label>
+        <input placeholder="Описание навыка" class="skill" name="skill_desc" type="text">
+<!-- Конец полей для ввода -->
+
+<!-- Поля для добавления мирных навыков -->
+        <label class="peaceful_skill" for="peaceful_skill_name">Название мирного навыка</label>
+        <input placeholder="Название мирного навыка" class="peaceful_skill" name="peaceful_skill_name" type="text">
+
+        <label class="peaceful_skill" for="peaceful_skill_price">Цена мирного навыка</label>
+        <input placeholder="Цена мирного навыка" class="peaceful_skill" name="peaceful_skill_price" type="number">
+
+        <label class="peaceful_skill" for="peaceful_skill_desc">Описание мирного навыка</label>
+        <input placeholder="Описание мирного навыка" class="peaceful_skill" name="peaceful_skill_desc" type="text">
+
+        <label class="peaceful_skill" for="peaceful_skill_class">Класс мирного навыка</label>
+        <input placeholder="Класс мирного навыка" class="peaceful_skill" name="peaceful_skill_class" type="text">
+<!-- Конец полей для ввода -->
+
+<!-- Поля для добавления брони -->
+        <label class="armor" for="armor_subclass">субкласс брони</label>
+        <input placeholder="субкласс брони" class="armor" name="armor_subclass" type="text">
+
+        <label class="armor" for="armor_name">Название брони</label>
+        <input placeholder="Название брони" class="armor" name="armor_name" type="text">
+
+        <label class="armor" for="armor_cost">Цена брони</label>
+        <input placeholder="Цена брони" class="armor" name="armor_cost" type="number">
+
+        <label class="armor" for="armor_kd">Класс брони</label>
+        <input placeholder="Класс брони" class="armor" name="armor_kd" type="number">
+
+        <label class="armor" for="armor_power">Сила брони</label>
+        <input placeholder="Сила брони" class="armor" name="armor_power" type="number">
+
+        <label class="armor" for="armor_stealth">Незаметность брони</label>
+        <input placeholder="Незаметность брони" class="armor" name="armor_stealth" type="number">
+
+        <label class="armor" for="armor_weight">Вес брони</label>
+        <input placeholder="Вес брони" class="armor" name="armor_weight" type="number">
+<!-- Конец полей для ввода -->
+
+<!-- Поля для добавления предметов -->
+        <label class="item" for="item_name">Название предмета</label>
+        <input placeholder="Название предмета" class="item" name="item_name" type="text">
+
+        <label class="item" for="item_cost">Цена предмета</label>
+        <input placeholder="Цена предмета" class="item" name="item_cost" type="number">
+
+        <label class="itemr" for="item_weight">Вес Предмета</label>
+        <input placeholder="Предмета брони" class="item" name="item_weight" type="number">
+<!-- Конец поля для ввода -->
+        <input type="submit" value="Добавить" id="submit" name="submit">
+    </form>
+    {% endif %}
+
+    {% if (form == "edit") %}
+    <p>форма изменения</p>
+    {% endif %}
+
+    {% if (form == "delete") %}
+    <p>форма удаления</p>
+    {% endif %}
+</body>
+</html>

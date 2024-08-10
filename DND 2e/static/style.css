@@ -1,0 +1,133 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.container h2{
+    color: rgb(255, 206, 93);
+    display: inline-block;
+    padding: 5px;
+    font-size: 2em;
+}
+.alice-regular {
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.card{
+    background-color: #d2b467;
+    text-align: center;
+    border-radius: 15px;
+    padding: 20px;
+    border-style: solid;
+    border-color: #958660;
+    border-width: 3px;
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 30px;
+    width: 400px;
+}
+
+.card h3{
+    font-weight: 500;
+}
+
+navbar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin: 1px;
+}
+
+header{
+    display: flex;
+    width: 100vw;
+    height: 9vw;
+    flex-direction: column;
+    align-items: left;
+    margin: 0;
+    background-color: #cab88c;
+}
+
+navbar>a{
+    text-decoration: none;
+    background-color:#d2b467;
+    padding: 2vw;
+    border-radius: 3px;
+    margin: 3px;
+    color: black;
+    border-style: solid;
+    border-color: #958660;
+    border-width: 1px;
+}
+
+body{
+    margin: 0;
+    background-image: url("../static/images/the_wolves_comm_by_yamaorce-dbx6lvt.jpg");
+    background-size: cover;
+    backdrop-filter: blur(2px);
+}
+
+navbar>button{
+    text-decoration: none;
+    background-color:#d2b467;
+    padding: 0.5vw;
+    font: 55%;
+    border-radius: 3px;
+    margin: 3px;
+    color: black;
+    border-style: solid;
+    border-color: #958660;
+    border-width: 1px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #cab88c;
+    border-style: solid;
+    width: 20vw;
+    border-radius: 15px;
+    margin: 12px;
+    padding: 15px;
+    font-size: 20px;
+}
+
+form input{
+    width: 70%;
+    height: 20px;
+    background-color: #958660;
+}
+
+form input::placeholder{
+    color:antiquewhite;
+    letter-spacing: 2px;
+    opacity: 0.6;
+}
+
+.combobox{
+    display: flex;
+    justify-content: space-around;
+    font-size: 17px;
+}
+
+.combobox label{
+    white-space: nowrap;
+}
+
+#submit{
+    margin-top: 15px;
+    border-radius: 10px;
+    width: 70%;
+    height: 30px;
+}
+
+#submit:hover{
+    background-color: #6f6449;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+}
