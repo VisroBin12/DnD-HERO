@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alice&family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
@@ -23,23 +24,24 @@
 <!-- Выбор, что добавлять -->
         <div class="combobox">
             <label for="skill_radio">Боевой навык</label>
-            <input name="skill_radio" onclick="skill_form()" type="radio">
+            <input  onclick="radio('skill')" class = "radio" name="skill_radio" onclick="skill_form()" type="radio">
 
             <label for="peaceful_skill_radio">Мирные навыки</label>
-            <input name="peaceful_skill" onclick="peaceful_skill_form()" type="radio">
+            <input onclick="radio('peaceful_skill')" class = "radio" name="peaceful_skill" onclick="peaceful_skill_form()" type="radio">
         </div>
         <div class="combobox">
             <label for="spells_radio">Заклинание</label>
-            <input name="spells_radio" onclick="spell_form()" type="radio">
+            <input onclick="radio('spell')" class = "radio" name="spells_radio" onclick="spell_form()" type="radio">
 
             <label for="armor_radio">Броня</label>
-            <input name="armor_radio" onclick="armor_form()" type="radio">
+            <input onclick="radio('armor')" class = "radio" name="armor_radio" onclick="armor_form()" type="radio">
 
             <label for="item_radio">Предметы</label>
-            <input name="item_radio" onclick="item_form()" type="radio">
+            <input onclick="radio('item')" class = "radio" name="item_radio" onclick="item_form()" type="radio">
         </div>
 
 <!-- Конец выбора -->
+        <div id = "cleaner">
 <!-- Поля для добавления (Заклинания)-->
         <label class="spell" for="spell_name">Название заклинания</label>
         <input placeholder="Название заклниание" class="spell" name="spell_name" type="text">
@@ -110,6 +112,7 @@
         <input placeholder="Предмета брони" class="item" name="item_weight" type="number">
 <!-- Конец поля для ввода -->
         <input type="submit" value="Добавить" id="submit" name="submit">
+    </div>
     </form>
     {% endif %}
 
@@ -120,5 +123,6 @@
     {% if (form == "delete") %}
     <p>форма удаления</p>
     {% endif %}
+    <script src="/static/scripts/buttons.js"></script>
 </body>
 </html>
