@@ -24,22 +24,22 @@
 <!-- Выбор, что добавлять -->
         <div class="combobox">
             <label for="skill_radio">Боевой навык</label>
-            <input  onclick="radio('skill')" class = "radio" name="skill_radio" onclick="skill_form()" type="radio">
+            <input  onclick="radio('skill', 'skills')" class = "radio" name="skill_radio" onclick="skill_form()" type="radio">
 
             <label for="peaceful_skill_radio">Мирные навыки</label>
-            <input onclick="radio('peaceful_skill')" class = "radio" name="peaceful_skill" onclick="peaceful_skill_form()" type="radio">
+            <input onclick="radio('peaceful_skill', 'skills_peaceful')" class = "radio" name="peaceful_skill" onclick="peaceful_skill_form()" type="radio">
         </div>
         <div class="combobox">
             <label for="spells_radio">Заклинание</label>
-            <input onclick="radio('spell')" class = "radio" name="spells_radio" onclick="spell_form()" type="radio">
+            <input onclick="radio('spell', 'spells')" class = "radio" name="spells_radio" onclick="spell_form()" type="radio">
 
             <label for="armor_radio">Броня</label>
-            <input onclick="radio('armor')" class = "radio" name="armor_radio" onclick="armor_form()" type="radio">
+            <input onclick="radio('armor','armor1')" class = "radio" name="armor_radio" onclick="armor_form()" type="radio">
 
             <label for="item_radio">Предметы</label>
-            <input onclick="radio('item')" class = "radio" name="item_radio" onclick="item_form()" type="radio">
+            <input onclick="radio('item','items1')" class = "radio" name="item_radio" onclick="item_form()" type="radio">
         </div>
-
+            <input id="table" disabled = "true" name="table" placeholder="таблица" type="text">
 <!-- Конец выбора -->
         <div id = "cleaner">
 <!-- Поля для добавления (Заклинания)-->
@@ -49,7 +49,7 @@
         <label class="spell" for="spell_lvl">Уровень заклинания</label>
         <input placeholder="Уровень заклинания" min="1", max="9" class="spell" name="spell_lvl" type="number">
 
-        <label class="spell" for="spell_scholl">Школа заклинания</label>
+        <label class="spell" for="spell_school">Школа заклинания</label>
         <input placeholder="Школа заклинания" class="spell" name="spell_school" type="text">
 
         <label class="spell" for="spell_desc">Описание заклинания</label>
